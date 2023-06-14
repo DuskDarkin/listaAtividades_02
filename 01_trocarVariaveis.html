@@ -1,15 +1,32 @@
 <script>
     /*
-    //PROBLEMA
-    Faça um script que pede dois inteiros e armazene eles em duas variáveis.
-    Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
-    */
+       //PROBLEMA
+       Faça um script que pede dois inteiros e armazene eles em duas variáveis.
+       Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
+       */
 
     //ENTRADA
 
+    let num1 = prompt("me diga um numero").trim();
+    let num2 = prompt("me diga um outro numero").trim();
+
+    if (isNaN(num1) == true || isNaN(num2) == true) {
+        alert("um dos dois não é um numero")
+    }
+    else if (num == num2) {
+        alert("os numeros são iguais informe outros")
+    }
+    else {
+        const num3 = num1
+
+        num1 = num2
+        num2 = num3
+
+        alert(`o primeiro numero é ${num1} e o segundo numero é ${num2}`)
+    }
     //PROCESSAMENTO
 
     //SAÍDA
 
-    
+
 </script>

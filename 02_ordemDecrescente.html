@@ -1,14 +1,58 @@
 <script>
     /*
-    //PROBLEMA
-    Faça um script que leia três números e mostre-os em ordem decrescente.
-    */
+  //PROBLEMA
+  Faça um script que leia três números e mostre-os em ordem decrescente.
+  */
 
     //ENTRADA
+    let num1 = Number(prompt("me diga o primeiro numero").trim());
+    let num2 = Number(prompt("me diga o segundo numero").trim());
+    let num3 = Number(prompt("me diga o terceiro numero").trim());
 
-    
+
+
     //PROCESSAMENTO
-    
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        alert("um ou mais valores não são numeros, tente novamente");
+    }
+
+    else if (num1 == num2 || num1 == num3 || num2 == num3) {
+        alert("numeros iguais, tente novamente")
+    }
+
+    else if (num1 > num2 && num1 > num3) {
+        if (num2 > num3) {
+            alert(`na ordem decrescente seria ${num1} ${num2} ${num3}`);
+        }
+
+        else {
+            alert(`na ordem decrescente seria ${num1} ${num3} ${num2}`);
+        }
+    }
+
+    else if (num2 > num1 && num2 > num3) {
+        if (num1 > num3) {
+            alert(`na ordem decrescente seria ${num2} ${num1} ${num3}`);
+        }
+
+        else {
+            alert(`na ordem decrescente seria ${num2} ${num3} ${num1}`);
+        }
+    }
+
+    else {
+        if (num1 > num2) {
+            alert(`na ordem decrescente seria ${num3} ${num1} ${num2}`);
+        }
+
+        else {
+            alert(`na ordem decrescente seria ${num3} ${num2} ${num1}`);
+        }
+
+
+    }
+
+
+
     //SAÍDA
-    
 </script>

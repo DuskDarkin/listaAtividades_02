@@ -7,10 +7,28 @@
     // - cães grandes: fator 7.
 
     // Entrada
-
+    const porte = prompt("qual o porte do seu cachorro? P, M ou G?").trim().toUpperCase()
+    const idade = Number(prompt("qual a sua idade?").trim())
     
     // Processamento
-
+    if(isNaN(idade) || !isNaN(porte)){
+        alert("resposta invalida")
+    }
+    else if (porte == "P"){
+        const result = Math.ceil(idade / 5);
+        alert(`a idade do seu cachorro é de ${result}`);
+    }
+    else if(porte == "M"){
+        const result = Math.ceil(idade / 6);
+        alert(`a idade do seu cachorro é de ${result}`);
+    }
+    else if(porte == "G"){
+        const result = Math.ceil(idade / 7);
+        alert(`a idade do seu cachorro é de ${result}`);
+    }
+    else{
+        alert("resultado invalido");
+    }
     
     // Saída
 

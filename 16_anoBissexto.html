@@ -1,11 +1,22 @@
 <meta charset="UTF-8" />
 <script>
-    // Recebe um ano e informa se ele é bissexto ou não.
+   // Recebe um ano e informa se ele é bissexto ou não.
 
     // Entrada
+    const ano = Number(prompt("me diga o ano").trim());
     
     // Processamento
+    const cont = ano / 4;
+    const dec = Math.ceil(cont)
 
     // Saída
-
+    if(cont < dec){
+        alert("não é bissexto")
+    }
+    else if(cont == dec){
+        alert("é bissexto")
+    }
+    else{
+        alert("resultado invalido")
+    }
 </script>

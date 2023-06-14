@@ -1,5 +1,5 @@
 <script>
-    /*
+  /*
     //PROBLEMA
     Um posto está vendendo combustíveis com a seguinte tabela de descontos:
     Álcool:
@@ -14,12 +14,45 @@
     */
 
     //ENTRADA
+    const comb = prompt("qual o tipo do combustivel? A-álcool ou G-gasolina").trim().toUpperCase();
+    const litro = Number(prompt("quantos litros você comprou").trim().toUpperCase());
 
 
     //PROCESSAMENTO
+    const gas = 6.50
+    const alc = 6.10
 
     
     //SAÍDA
+    if(comb == "A"){
+        if(litro > 20){
+            const combA = alc * litro 
+            const combA2 = combA * 0.05
+            const combA3 = combA - combA2
+            alert(`voce pagará R$ ${combA3.toFixed(2)}`)
+        }
+        else{
+            const combA = alc * litro 
+            const combA2 = combA * 0.03
+            const combA3 = combA - combA2
+            alert(`voce pagará R$ ${combA3.toFixed(2)}`)
+        }
+    }
 
+    else  if(comb == "G"){
+        if(litro > 20){
+            const combG = gas * litro 
+            const combG2 = combG * 0.06
+            const combG3 = combG - combG2
+            alert(`voce pagará R$ ${combG3.toFixed(2)}`)
+        }
+        else{
+            const combG = gas * litro 
+            const combG2 = combG * 0.04
+            const combG3 = combG - combG2
+            alert(`voce pagará R$ ${combG3.toFixed(2)}`)
+        }
+    }
+  
 
 </script>

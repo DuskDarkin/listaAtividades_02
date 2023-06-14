@@ -3,11 +3,50 @@
     // Um professor instituiu o programa BB na sua disciplina. Nesse programa, um aluno com notas melhores (o big brother) “adota” um aluno com dificuldades (o little brother) e o ajuda a aprender, em troca de um incentivo em sua nota, que é dado em função de quanto ele ajudou o seu colega a melhorar o próprio resultado. Esse programa recebe a nota do little brother antes de receber ajuda, e a sua nota depois que o big brother o ajudou, e retorna o acréscimo que o big brother receberá em sua nota pela ajuda. O acréscimo é de 1/4 da diferença das notas, se for positivo.
 
     // entrada
+    const BB = Number(prompt("qual a nota do Big Brother").trim().replace(",","."))
+    const LB = Number(prompt("qual a nota antiga do Little Brother").trim().replace(",","."))
+    const LB2 = Number(prompt("qual a nova nota do Lttle Brother").trim().replace(",","."))
 
     
     // processamento
-
+    const diferença = LB - LB2
+    const acrescimo = diferença/4
+    const result = BB + acrescimo
+   
     
     // saída
+
+    if(isNaN(BB) || isNaN(LB) || isNaN(LB2)){
+        alert("resposta invalida")
+    }
+
+    else if(BB < 0 || LB < 0 || LB2 < 0){
+        alert("numeros negativos são invalidos")
+    }
+
+    else if(BB > 10 || LB > 10 || LB2 > 10){
+        alert("numeros maiores que 10 são invalidos informe numeros de 0 a 10")
+    }
+
+    else if(LB == LB2){
+        alert("a nota não mudou")
+    }
+
+    else if(diferença < 0){
+        alert("seu amigo não melhorou a nota e voce não ganhara acrescimo")
+    }
+
+    else if(diferença > 0){
+        if(BB >= 10 || result > 10){
+            alert("seu crescimo será dado no proximo trimestre")
+        }
+        else{
+        alert(`o acrescimo será de ${acrescimo.toFixed(2)} e sua nota será de ${result}`)
+        }
+    }
+
+    else{
+        alert("resultado invalido")
+    }
 
 </script>

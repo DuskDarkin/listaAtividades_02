@@ -1,16 +1,29 @@
 <script>
-    /*
+       /*
     //PROBLEMA
     Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
     */
 
     //ENTRADA
+    let numero = Number(prompt("me diga um numero inteiro").trim().replace(",","."));
 
     
     //PROCESSAMENTO
-    
+    if(isNaN(numero) || numero < 0){
+        alert("resposta invalida")
+    }
+
+    else if(numero % 2 == 0){
+        alert("o numero e par")
+    }
+
+    else if(numero % 2 !== 0){
+        alert("o numero e impar")
+    }
+
+    else{
+        alert("resultado invalido")
+    }
     
     //SAÍDA
-    
-    
 </script>
